@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import styles from './styles.module.css'
-import user from '../../sourses/profile/user.json'
+import userJSON from '../../sourses/profile/user.json'
 
 class Profile extends Component {
   render() {
@@ -10,7 +10,7 @@ class Profile extends Component {
       location,
       avatar,
       stats: { followers, views, likes }
-    } = user
+    } = userJSON
 
     return (
       <div className={styles.profile} >
