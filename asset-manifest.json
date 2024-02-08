@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/korysergey55/goit-react-woolf-hw-01-components/static/css/main.7b9c02ba.css",
-    "main.js": "/korysergey55/goit-react-woolf-hw-01-components/static/js/main.e5c6ea1c.js",
-    "index.html": "/korysergey55/goit-react-woolf-hw-01-components/index.html",
-    "main.7b9c02ba.css.map": "/korysergey55/goit-react-woolf-hw-01-components/static/css/main.7b9c02ba.css.map",
-    "main.e5c6ea1c.js.map": "/korysergey55/goit-react-woolf-hw-01-components/static/js/main.e5c6ea1c.js.map"
+    "main.css": "/goit-react-woolf-hw-01-components/static/css/main.7b9c02ba.css",
+    "main.js": "/goit-react-woolf-hw-01-components/static/js/main.e5c6ea1c.js",
+    "index.html": "/goit-react-woolf-hw-01-components/index.html",
+    "main.7b9c02ba.css.map": "/goit-react-woolf-hw-01-components/static/css/main.7b9c02ba.css.map",
+    "main.e5c6ea1c.js.map": "/goit-react-woolf-hw-01-components/static/js/main.e5c6ea1c.js.map"
   },
   "entrypoints": [
     "static/css/main.7b9c02ba.css",
