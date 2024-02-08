@@ -20,7 +20,7 @@ class Statistics extends Component {
                 <span className={styles.percentage}>{item.percentage}</span>
               </li>
             ))
-            : <h2 className={styles.title}>Sorry, something went wrong! No data</h2>}
+            : <h2 className={styles.title}>Sorry, something went wrong!No data</h2>}
         </ul>
       </section >
     )
