@@ -1,32 +1,26 @@
-import { Component } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
+import TransactionsItem from './transactionsItem/TransactionsItem'
 
-class TransactionHistory extends Component {
-
-  render() {
-
-    return (
-      <table className={styles.transactionHistory}>
-        <thead className={styles.thead}>
-          <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
-          </tr>
-        </thead>
-
+const TransactionHistory = ({ data }) => {
+  return (
+    <table className={styles.transactionHistory}>
+      <thead className={styles.thead}>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
+      {data ?
         <tbody className={styles.tbody}>
-          {this.props.items ? this.props.items.map((item) => (
-            <tr className={styles.tr} key={item.id}>
-              <td className={styles.td}>{item.type}</td>
-              <td className={styles.td}>{item.amount}</td>
-              <td className={styles.td}>{item.currency}</td>
-            </tr>
-          )) : <h2 className={styles.title}>Sorry, something went wrong! No data</h2>}
+          {data?.map((item) => (
+            <TransactionsItem item={item} key={item.id} />
+          ))}
         </tbody>
-      </table>
-    )
-  }
+        : <h2 className={styles.title}>Sorry, something went wrong! No data</h2>}
+    </table>
+  )
 }
 
 export default TransactionHistory

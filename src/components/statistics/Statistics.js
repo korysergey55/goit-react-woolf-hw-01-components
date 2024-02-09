@@ -1,30 +1,24 @@
-import { Component } from 'react'
+import React from 'react'
 import styles from './styles.module.css'
-import createRandomColor from 'utiles/randomColor'
+import StatisticItem from './statisticItem/StatisticItem'
 
-class Statistics extends Component {
+const Statistics = ({ title, stats }) => {
 
-
-  render() {
-    return (
-      <section className={styles.statistics} >
-        <h2 className={styles.title}>{this.props.title}</h2>
-
+  return (
+    <section className={styles.statistics} >
+      <h2 className={styles.title}>{title ? title : 'Statistics Component'}</h2>
+      {stats ?
         <ul className={styles.statList}>
-          {this.props.stats ?
-            this.props.stats.map((item) => (
-              <li className={styles.item} key={item.id} style={{
-                backgroundColor: `rgb(${createRandomColor()})`
-              }}>
-                <span className={styles.label}>{item.label}</span>
-                <span className={styles.percentage}>{item.percentage}</span>
-              </li>
-            ))
-            : <h2 className={styles.title}>Sorry, something went wrong!No data</h2>}
+          {stats?.map((item) => (
+            <StatisticItem item={item} key={item.id} />
+          ))
+          }
         </ul>
-      </section >
-    )
-  }
+        : <h2 className={styles.title}>Sorry, something went wrong! No data</h2>
+      }
+
+    </section >
+  )
 }
 
 export default Statistics 

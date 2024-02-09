@@ -1,3 +1,4 @@
+import dataUserJSON from '../sourses/profile/user.json'
 import dataStatsJSON from '../sourses/statistics/data.json'
 import dataFriendListJSON from '../sourses/friends/friends.json'
 import dataTransactionsJSON from '../sourses/transactions/transactions.json'
@@ -23,7 +24,7 @@ export const App = () => {
       }}
     >
       <h2>Task-1 User Profile</h2>
-      <Profile />
+      <Profile user={dataUserJSON} />
 
       <h2>Task-2 User Statistics</h2>
       <Statistics title="Upload stats" stats={dataStatsJSON} />
@@ -32,7 +33,7 @@ export const App = () => {
       <FriendList data={dataFriendListJSON} />
 
       <h2>Task-4 Transaction History</h2>
-      <TransactionHistory items={dataTransactionsJSON} />
+      <TransactionHistory data={dataTransactionsJSON} />
     </div >
   );
 };

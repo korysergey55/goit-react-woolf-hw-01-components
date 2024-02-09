@@ -28,18 +28,5 @@
   list-style: none;
   overflow: hidden  ;
 }
-.item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* flex-grow:1; */
-  /* gap: 10px; */
 
-  padding: 10px;
-  min-width: 100px;
-  max-width: 100px;
-  
-  
-}
 
